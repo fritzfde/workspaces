@@ -1,0 +1,54 @@
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+body {
+  background-color: hsl(251, 20%, 11%);
+  color: #CDC8E4;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Set the background color of the app to a dark color */
+body {
+  background-color: #1e1e1e;
+}
+
+/* Set the text color of the app to a light color */
+body, button, mat-card, mat-form-field {
+  color: #CDC8E4;
+  background-color: #181621;
+}
+button {
+  border: none;
+}
+
+.mat-button {
+  background-color: #181621;
+  color: #fff;
+}
+
+
+/* Set the background color of all components to a dark color */
+.mat-card, .mat-form-field, .mat-button {
+  background-color: #424242;
+}
+
+/* Set the hover color of all components to a slightly lighter color */
+.mat-card:hover, .mat-form-field:hover, .mat-button:hover {
+  background-color: #616161;
+}
+
+/* Set the color of all primary buttons to a custom color */
+.mat-primary {
+  background-color: #1976d2;
+  color: #f5f5f5;
+}
+
+/* Set the hover color of all primary buttons to a slightly lighter color */
+.mat-primary:hover {
+  background-color: #0d47a1;
+}
+
+.mat-table ::ng-deep .mat-cell {
+  background-color: #181621;
+}
+
+// @import './custom-theme';

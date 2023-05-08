@@ -1,0 +1,33 @@
+@import '~@angular/material/theming';
+
+// Define your custom palette
+$custom-palette: (
+  50: #e5e5e5,
+  100: #c7c7c7,
+  200: #a8a8a8,
+  300: #8a8a8a,
+  400: #717171,
+  500: #585858,
+  600: #4e4e4e,
+  700: #444444,
+  800: #3a3a3a,
+  900: #303030,
+  A100: #8c8c8c,
+  A200: #757575,
+  A400: #5e5e5e,
+  A700: #515151,
+);
+
+// Create a custom Material theme using the custom palette
+$custom-theme: mat-light-theme($custom-palette);
+
+// Override the background color of the mat-table component
+$custom-theme: map_merge($custom-theme, (
+  "mat-table": (
+    "background-color": map_get($custom-palette, 900)
+  )
+));
+
+// Include the custom theme in your application
+@include angular-material-theme($custom-theme);
+

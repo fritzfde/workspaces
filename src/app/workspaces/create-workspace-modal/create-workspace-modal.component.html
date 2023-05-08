@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Create Workspace</h1>
+
+<mat-dialog-content>
+  <form [formGroup]="workspaceForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="Workspace name"/>
+      <mat-error *ngIf="workspaceForm.get('name')?.invalid">
+        Please enter a workspace name.
+      </mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-icon-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+  <button
+    mat-button
+    color="primary"
+    [disabled]="workspaceForm.invalid"
+    (click)="create()"
+  >
+    <span *ngIf="!isCreatingWorkspace">Create</span>
+    <mat-spinner *ngIf="isCreatingWorkspace" diameter="20"></mat-spinner>
+  </button>
+</mat-dialog-actions>
