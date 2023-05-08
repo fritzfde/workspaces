@@ -2,13 +2,11 @@
   <app-create-workspace-modal (closeModal)="closeModal()" (workspaceCreated)="onWorkspaceCreated($event)"></app-create-workspace-modal>
 
 </ng-template>
-<button mat-flat-button color="primary" (click)="openCreateWorkspaceModal()">Create Workspace</button>
+<div class="mat-button-wrapper">
+  <button class="mat-align-end align-right" mat-flat-button color="primary" (click)="openCreateWorkspaceModal()">+ New Workspace</button>
+</div>
 
 <mat-table [dataSource]="dataSource" matSort matSortActive="id" matSortDirection="asc">
-  <ng-container matColumnDef="id">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
-    <mat-cell *matCellDef="let workspace"> {{ workspace.id }} </mat-cell>
-  </ng-container>
 
   <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>

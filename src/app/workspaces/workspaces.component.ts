@@ -22,7 +22,7 @@ import { catchError, tap } from 'rxjs/operators';
 })
 export class WorkspacesComponent implements OnInit, OnDestroy {
   dataSource!: MatTableDataSource<Workspace>;
-  displayedColumns: string[] = ['id', 'name', 'actions'];
+  displayedColumns: string[] = ['name', 'actions'];
   private subscriptions = new Subscription();
   workspaceCreatedSubscription: Subscription | null = null;
   @Output() workspaceCreated = new EventEmitter();
